@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from './Image'
+import Link from 'next/link'
+import PostInfo from './PostInfo'
+import PostInteractions from './PostInteractions'
 
 const Post = () => {
   return (
@@ -27,6 +30,40 @@ const Post = () => {
           relative w-10 h-10 rounded-full overflow-hidden'
         >
           <Image path='general/avatar.png' alt='' w={100} h={100} tr={true} />
+        </div>
+        {/* CONTENT */}
+        <div className='flex-1 flex flex-col gap-2'>
+          {/* TOP */}
+          <div className='w-full flex justify-between'>
+            <Link href={`/lamaWebDev`} className='flex gap-4'>
+              {/* <div className='relative w-10 h-10 rounded-full overflow-hidden'>
+                <Image
+                  path='general/avatar.png'
+                  alt=''
+                  w={100}
+                  h={100}
+                  tr={true}
+                />
+              </div> */}
+              <div className='flex items-center gap-2 flex-wrap'>
+                <h1 className='text-md font-bold'>Anand Dev</h1>
+                <span className='text-textGray'>@AnandDev</span>
+              </div>
+            </Link>
+            <PostInfo />
+          </div>
+          {/* TEXT & MEDIA */}
+          <Link href={`/lamaWebDev/status/123`}>
+            <p className=''>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+              animi. Laborum commodi aliquam alias molestias odio, ab in,
+              reprehenderit excepturi temporibus, ducimus necessitatibus fugiat
+              iure nam voluptas soluta pariatur inventore.
+            </p>
+          </Link>
+          <Image path='general/post.jpeg' alt='' w={600} h={600} />
+
+          <PostInteractions />
         </div>
       </div>
     </div>

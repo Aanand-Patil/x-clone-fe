@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from './Image'
 
 const Post = () => {
   return (
@@ -17,6 +18,16 @@ const Post = () => {
           />
         </svg>
         <span>Anand Dev reposted</span>
+      </div>
+      {/* POST CONTENT */}
+      <div className='flex gap-4'>
+        {/* AVATAR */}
+        <div
+          className='
+          relative w-10 h-10 rounded-full overflow-hidden'
+        >
+          <Image path='general/avatar.png' alt='' w={100} h={100} tr={true} />
+        </div>
       </div>
     </div>
   )

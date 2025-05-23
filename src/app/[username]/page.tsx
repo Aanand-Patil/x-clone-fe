@@ -8,7 +8,7 @@ const UserPage = () => {
       {/* PROFILE TITLE */}
       <div className='flex items-center gap-8 sticky top-0 backdrop-blur-md p-4 z-10 bg-[#00000084]'>
         <Link href='/'>
-          <Image path='icons/back.svg' alt='back' w={24} h={24} />
+          <Image path='icons/back.svg' alt='back' w={24} h={24} tr={true} />
         </Link>
         <h1 className='font-bold text-lg'>Anand Dev</h1>
       </div>
@@ -18,11 +18,11 @@ const UserPage = () => {
         <div className='relative w-full'>
           {/* COVER */}
           <div className='w-full aspect-[3/1] relative'>
-            <Image path='general/cover.jpg' alt='' w={600} h={200} tr={true} />
+            <Image path='general/cover.jpg' alt='' w={600} h={200} tr={false} />
           </div>
           {/* AVATAR */}
           <div className='w-1/5 aspect-square rounded-full overflow-hidden border-4 border-black bg-gray-300 absolute left-4 -translate-y-1/2'>
-            <Image path='general/avatar.png' alt='' w={100} h={100} tr={true} />
+            <Image path='general/avatar.png' alt='' w={100} h={100} tr />
           </div>
         </div>
         <div className='flex w-full items-center justify-end gap-2 p-2'>
